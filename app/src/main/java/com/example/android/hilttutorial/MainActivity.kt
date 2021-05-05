@@ -6,12 +6,12 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    @SpanishQualifier
     @Inject
-    lateinit var spanishPerson: SpanishPerson
+    lateinit var spanishPerson: Person
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        spanishPerson.speakSpanish()
-        spanishPerson.englishPerson.speakEnglish()
+        spanishPerson.speakLanguage()
     }
 }
